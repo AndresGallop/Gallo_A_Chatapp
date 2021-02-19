@@ -1,21 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head> 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link type="text/css" rel="stylesheet" href="css/main.css">
 
-    <title>Chatealo</title>
+    <title>Space chat</title>
 </head>
 <body>
-    <main id="app">
+    <main id="app"> 
         <h2>This is where my awesome chat message will show up</h2>
 
         <!-- vue custom message component goes here-->
         <section class="messages">
             <ul id="messages" v-for="message in messages">
-                <newmessage :msg="message" :scoketid="socketID"></newmessage>
+                <newmessage :msg="message" :socketid="socketID"></newmessage>
             </ul>
         </section>
 

@@ -3,25 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="public/css/main.css">
     <link rel="stylesheet" href="css/main.css">
-    
-    <title>Chatealo</title>
+      
+    <title>Space Chat</title>
 </head>
 <body>
     <main>
-        <h1 class="hidden">Super chat application never seen before</h1>
-        <h4>Add a username to join the chat</h4>
-        <h6>or not, to stealth post</h6>
+        <section class="whole">
+        <div class="form">
+            <div class="icon">
+            </div>
+        <h1 class="hidden">SPACE</h1>
+        <h4>chat</h4>
+        <!-- <h6>or not, to stealth post</h6> -->
 
-        <input type="text" placeholder="your handle">
-        <input type="password" placeholder="password">
-
-        <input type="submit" value="JOIN">
-
+        <input class="inputi" type="text" placeholder="Nickname" v-model="nickname">
+       
+        <a href="/chat">
+        </a><input @click="sendname($event)" class="joinbutton" type="submit" value="JOIN">
+        </a>
         <!-- temp hack to bypass login-->
-        <a href="/chat">to chat page</a>
+        
+    </div>
+</section>
     </main>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script defer type="module" src="scripts/main.js"></script>
     
 </body>
 </html>

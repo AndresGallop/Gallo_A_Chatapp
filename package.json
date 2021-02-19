@@ -5,7 +5,7 @@
   "main": "app.js",
   "scripts": {
     "start-dev": "nodemon app",
-    "start-ui": "browser-sync start --proxy 'localhost:5050' --files 'index.html' 'public'",
+    "start-ui": "browser-sync start --proxy 'localhost:5050' --files 'index.html' 'public' 'images'",
     "start": "node app"
   },
   "keywords": [],
@@ -13,6 +13,7 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1",
+    "gsap": "^3.6.0",
     "socket.io": "^3.1.0"
   }
 }
