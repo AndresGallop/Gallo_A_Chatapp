@@ -15,7 +15,7 @@ import ChatMessage from "./components/TheMessageComponent.js";
 
     // function getnickname(nickname){
 
-    //     vm.nickname = elbro;
+        
     // }
 
     function appendMessage(message) {
@@ -35,11 +35,11 @@ import ChatMessage from "./components/TheMessageComponent.js";
         created: function() {
             console.log('its alive!!');
             
-            this.nickname = window.localStorage.getItem('astroname');
+            this.nickname = localStorage.getItem('name');
         },
 
         methods: {
-            dispatchMassage() {
+            dispatchMessage() {
                 //debugger;
                 socket.emit('chatmessage',
                  { 
@@ -53,8 +53,13 @@ import ChatMessage from "./components/TheMessageComponent.js";
             sendname() {
                // window.localStorage.removeItem('name');
                 
-                window.localStorage.setItem("name", this.nickname);
-                window.location.href = '/chat'; 
+               //ESTE WINDOW.LOCALSTORAGE ALMACENA DATA EN EL PC
+               var name = document.getElementById("myname").value;
+
+                localStorage.setItem('name', this.nickname);
+
+                //ESTO NOS LLEVA HACIA LA PAGINA
+                location.href = '/chat'; 
               }
         },
 

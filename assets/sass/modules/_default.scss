@@ -22,16 +22,31 @@ a{
 
 .new-message{
     padding: 10px;
-    background-color: antiquewhite;
-    color: brown;
+    background-image: linear-gradient(rgba(151, 238, 51, 0.815),#35ecec, rgba(24, 95, 161, 0.815));
+    color: white;
     float: left;
     clear: both;
-    border-radius: 10% 10% 10% 10%;
+    border-radius: 25px;
+    margin: 50px;
 }
 
 .my-message{ 
-    background-color:pink;
-    color: blue;
+    width: 35%;
+    height: auto;
+    padding: 10px;
+    margin: 50px;
+    background-image: linear-gradient(rgba(237, 136, 178, 0.815),#6F4AD5, rgba(90, 12, 76, 0.815));
+    color: white;
     float: right;
-    border-radius: 10% 10% 10% 10%;
+    border-radius: 25px;
+}
+
+.persona{
+    font-size: 25px;
+    font-family: 'Questrial', sans-serif;
+    letter-spacing: 5px;
+}
+
+.contenido{
+    font-size: 30px;
 }

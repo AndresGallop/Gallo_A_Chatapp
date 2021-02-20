@@ -6,12 +6,16 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-}
+} 
 
 .messages{
-    height: 50%;
+    height: 80%;
     width: 80%;
-    background-color: brown;
+    background-color: rgba(15, 12, 12, 0.801);
+    border-radius: 0px;
+    outline: none;
+    border-color: #9ecaed;
+    box-shadow: 0 0 10px #9ecaed;
 }
 
 .elbutton{
@@ -21,4 +25,34 @@
     width: 450px;
     height:auto;
     //background-color: aqua;
+}
+
+.text-message{
+    outline: none;
+    border-color: #9ecaed;
+    box-shadow: 0 0 10px #9ecaed;
+    width: 90%;
+}
+
+.message-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    background-color: red;
+    width: 80%;
+}
+
+.butsend{
+    height: 100%;
+    width: 20%;
+    background-color: rgba(115, 225, 245, 0.856);
+    outline: none;
+    border-color: #9ecaed;
+    box-shadow: 0 0 10px #9ecaed;
+}
+
+.phrase{
+    margin:20px;
 }

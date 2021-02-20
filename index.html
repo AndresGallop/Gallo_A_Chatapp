@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@700&display=swap" rel="stylesheet">
     <!-- <link rel="stylesheet" href="public/css/main.css"> -->
+    <base href="/">
     <link rel="stylesheet" href="css/main.css">
       
     <title>Space Chat</title>
@@ -22,10 +23,10 @@
         <h4>chat</h4>
         <!-- <h6>or not, to stealth post</h6> -->
 
-        <input v-model="nickname" class="inputi" type="text" placeholder="Write your astroname">
+        <input id="myname" v-model="nickname" class="inputi" type="text" placeholder="Write your astroname">
        
         <a class="elbutton" href="/chat">
-        <input @click.prevent="sendname" class="joinbutton" type="submit" value="JOIN">
+        <input @click.prevent="sendname" class="joinbutton" type="submit" value="Start your trip">
         </a>
         <!-- temp hack to bypass login-->
         

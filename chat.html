@@ -3,6 +3,10 @@
 <head> 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@700&display=swap" rel="stylesheet">
 
     <link type="text/css" rel="stylesheet" href="css/main.css">
 
@@ -10,7 +14,7 @@
 </head>
 <body>
     <main id="app">
-        <h2>This is where my awesome chat message will show up</h2>
+        <h2 class="phrase">"THAT'S ONE SMALL STEP FOR MAN, ONE GIANT LEAP FOR MANKIND"</h2>
 
         <!-- vue custom message component goes here-->
         <section class="messages">
@@ -21,7 +25,7 @@
 
         <section class="message-wrapper">
             <textarea v-model="message" class="text-message"></textarea>
-            <input @click.prevent="dispatchMassage" type="submit" value="send">
+            <input class="butsend" @click.prevent="dispatchMessage" type="submit" value="Send">
         </section>
     </main>
     <script src="/socket.io/socket.io.js"></script>
