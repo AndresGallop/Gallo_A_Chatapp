@@ -8,9 +8,8 @@
 body{
     background-color: $main-bg-color;
     color: $main-text-color;
-
     font-family: $default-family;
-    font-size: 16px;
+    font-size: 16px; 
 }
 
 a{
@@ -27,9 +26,12 @@ a{
     color: brown;
     float: left;
     clear: both;
+    border-radius: 10% 10% 10% 10%;
 }
 
 .my-message{ 
-    background-color:aquamarine;
-    float: right; 
+    background-color:pink;
+    color: blue;
+    float: right;
+    border-radius: 10% 10% 10% 10%;
 }

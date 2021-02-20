@@ -24,20 +24,30 @@ const server = app.listen(port, () => {
 // messenger is a connection manager - like a switchboard operator
 messenger.attach(server);
 
+
 // socket is the individual connection - the caller
-messenger.on('connection', (socket) => {
+messenger.on('connection', (socket) => {  //TODO ESTE PEDAZO ES EL MISMO SOCKET.IO PORQUE FUE DEFINIDO COMO MESSENGER ↑↑↑↑ TOP
     console.log(`a user connected: ${socket.id}`);
 
     // send the connected user their assigned ID
     socket.emit('connected', { sID: `${socket.id}`, message: 'new connection'});
+           // nickname: `${$nickname}`
+
+    // socket.on( 'sendnickname', function(enviarnickname) {
+    //     socket.enviarnickname = nickname;
+    //     users.push(socket.nickname);
+    //     console.log(users);
+
+    //     socket.emit('sendnickname', enviarnickname);
+    // });
 
     socket.on('chatmessage', function(msg) {
         console.log(msg);
-
-        messenger.emit('message', { id: socket.id, message: msg});
+        messenger.emit('message', { id: socket.id, message: msg })
     });
 
     socket.on('disconnect', () => {
         console.log('a user has disconnected');
-    })
+        //window.localStorage.clear();
+    }); 
 });
